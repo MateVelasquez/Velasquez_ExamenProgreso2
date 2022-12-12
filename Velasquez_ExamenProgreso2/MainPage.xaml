@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+             x:Class="Velasquez_ExamenProgreso2.MainPage">
+
+    <StackLayout>
+        <Label Text="Ingrese el número de teléfono" HorizontalTextAlignment="Center" Margin="30" FontSize="Title"/>
+        <Entry x:Name="mv_entry" Placeholder=" Número de teléfono"  HorizontalTextAlignment="Center"  Margin="20" BackgroundColor="LightSkyBlue" PlaceholderColor="Black" TextColor="Black"/>
+        <Frame BorderColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="250" HeightRequest="80" Margin="10">
+            <Picker x:Name="mv_picker" Title="Seleccione una operadora" TitleColor="Black" FontAttributes="Bold"  HorizontalTextAlignment="Center" BackgroundColor="DarkRed">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Movistar</x:String>
+                        <x:String>Claro</x:String>
+                        <x:String>CNT</x:String>
+                        <x:String>Tuenti</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Frame>
+
+            <Label Text="Seleccione un valor para la recarga" HorizontalTextAlignment="Center" Margin="30" FontAttributes="Bold"/>
+            <RadioButton GroupName="mv_rb" Content="3$" HorizontalOptions="Center"/>
+            <RadioButton GroupName="mv_rb" Content="5$" HorizontalOptions="Center"/>
+            <RadioButton GroupName="mv_rb" Content="10$" HorizontalOptions="Center"/>
+
+        <Button x:Name="mv_button" HorizontalOptions="Center" Text="Recargar" Margin="30">
+            
+            
+        </Button>
+    </StackLayout>
+</ContentPage>
